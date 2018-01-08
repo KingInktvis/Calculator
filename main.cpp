@@ -3,12 +3,10 @@
 #include "Calculator.h"
 
 int main(int argc, char *argv[]) {
-    char calc[] = "100*4-50/2";
-    int len = static_cast<int>(strlen(calc));
+    int len = static_cast<int>(strlen(argv[1]));
     int res;
     Calculator obj;
-
-    res = obj.solve(len, calc);
-    std::cout << res;
+    res = obj.solve(len, argv[1]);
+    std::cout << res << '\n';
     return 0;
 }
